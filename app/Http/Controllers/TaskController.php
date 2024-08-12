@@ -22,7 +22,9 @@ class TaskController extends Controller
         $task->save();
 
         $data=task::all();
-        dd($data);
+        return view('task')->with('tasks',$data);
+        
+        //dd($data);
         //return redirect()->back();
     }
 }
